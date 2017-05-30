@@ -1,5 +1,6 @@
 (ns mockservice.core
   (:gen-class)
+  
   (:require [clojure.core.async
              :as a
              :refer [>! <! >!! <!! go chan buffer close! thread
@@ -11,7 +12,7 @@
 
 (defn async-response [request]
   (with-channel request channel
-      (go (send! channel {:status 200 :body "dummy"}))))
+      (go (send! channel {:status 200 :body "dummmmy"}))))
 
 (defroutes routes
   (GET "/test" [] async-response)
