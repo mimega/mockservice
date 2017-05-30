@@ -12,7 +12,7 @@
 
 (defn async-response [request]
   (with-channel request channel
-      (go (send! channel {:status 200 :body "dummy"}))))
+      (go (send! channel {:status 200 :body "dummmmy"}))))
 
 (defroutes routes
   (GET "/test" [] async-response)
